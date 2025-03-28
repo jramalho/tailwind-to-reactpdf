@@ -1,5 +1,5 @@
 {
-  "name": "tailwind-to-reactpdf",
+  "name": "tw-to-react-pdf",
   "version": "0.1.0",
   "description": "Convert React components with Tailwind CSS and Shadcn UI to PDF using React-PDF",
   "main": "dist/index.js",
