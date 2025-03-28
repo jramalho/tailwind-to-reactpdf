@@ -2,11 +2,15 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-// Clean dist directory
-console.log('Cleaning dist directory...');
-if (fs.existsSync(path.join(__dirname, '../dist'))) {
-  fs.rmSync(path.join(__dirname, '../dist'), { recursive: true, force: true });
+// Clean up the dist directory
+const distDir = path.join(__dirname, '../dist');
+
+if (fs.existsSync(distDir)) {
+  console.log('Cleaning dist directory...');
+  fs.rmSync(distDir, { recursive: true, force: true });
 }
+
+console.log('Build directory cleaned successfully.');
 
 // Build the library
 console.log('Building library...');

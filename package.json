@@ -1,6 +1,6 @@
 {
   "name": "tw-to-react-pdf",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "description": "Convert React components with Tailwind CSS and Shadcn UI to PDF using React-PDF",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -9,27 +9,25 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
+    "build": "tsup --config tsup.config.js",
+    "dev": "tsup --config tsup.config.js --watch",
     "clean": "node scripts/build.js",
-    "prepublishOnly": "npm run clean",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "react",
     "pdf",
     "tailwind",
     "shadcn",
-    "react-pdf"
+    "react-pdf",
+    "nextjs"
   ],
   "author": "",
   "license": "MIT",
   "peerDependencies": {
+    "@react-pdf/renderer": ">=4.0.0",
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0",
-    "@react-pdf/renderer": ">=4.0.0",
     "tailwindcss": ">=3.0.0"
   },
   "devDependencies": {
@@ -53,12 +51,16 @@
     "postcss": "^8.4.35",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "source-map-loader": "^5.0.0",
     "tailwindcss": "^3.4.1",
     "ts-jest": "^29.3.0",
     "tsup": "^8.0.2",
     "typescript": "^5.8.2"
   },
   "dependencies": {
-    "@react-pdf/renderer": "^4.3.0"
+    "@react-pdf/renderer": ">=4.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
   }
 }
